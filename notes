@@ -56,6 +56,39 @@ service命令详解
   http://blog.csdn.net/yy20071313/article/details/20583713
 
 
+ssh远程连接服务
+  Ubuntu下查看ssh服务是否安装或启动的方法
+
+    查看ssh是否启动，有sshd说明已经启动 
+    sudo ps -e |grep ssh
+
+    启动ssh服务
+    sudo service ssh start
+    下图是没有安装ssh服务时,运行的效果
+
+    安装ssh服务
+    sudo apt-get install openssh-server
+   http://www.jb51.net/article/104076.htm
+
+  linux下开启SSH，并且允许root用户远程登录,允许无密码登录 
+  http://blog.csdn.net/jia0511/article/details/8237698
+    允许root登录
+    vi /etc/ssh/sshd_config
+    将PermitRootLogin值改yes
+    允许不输入密码登录
+    将PermitEmptyPasswords yes前面的#号去掉
+    重启服务：service sshd restart（/etc/initd.d/sshd restart）
+    测试：ssh <ipaddress> 或 ssh <hostname> 或 用putty软件
+
+  Linux系统下如何配置SSH？如何开启SSH？
+  http://jingyan.baidu.com/article/08b6a591f0fafc14a9092275.html
+
+
+linux grep命令
+http://www.cnblogs.com/end/archive/2012/02/21/2360965.html
+
+
+
 
 
 
