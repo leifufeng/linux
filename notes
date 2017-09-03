@@ -1,0 +1,65 @@
+linux关机命令
+  常用：halt、reboot
+  CentOS关机命令：
+  重启命令
+  reboot
+  shutdown -r now 立刻重启
+  shutdown -r 10 过10分钟自动重启
+  shutdown -r 20:35 在时间为20:35时候重启
+  shutdown -c 取消重启
+  关机命令
+  halt
+  poweroff 立刻关机
+  shutdown -h now 立刻关机
+  shutdown -h 10 10分钟后自动关机
+  
+  http://www.cnblogs.com/wanggd/archive/2013/07/08/3177398.html
+
+service命令详解 
+  常用方式
+  格式：service <service>
+  打印指定服务<service>的命令行使用帮助。
+
+  格式：service <service> start
+  启动指定的系统服务<service>
+
+  格式：service <service> stop
+  停止指定的系统服务<service>
+
+  格式：service <service> restart
+  重新启动指定的系统服务<service>，即先停止（stop），然后再启动（start）。
+
+  格式：chkconfig --list
+  查看系统服务列表，以及每个服务的运行级别。
+
+  格式：chkconfig <service> on
+  设置指定服务<service>开机时自动启动。
+
+  格式：chkconfig <service> off
+  设置指定服务<service>开机时不自动启动。
+
+  格式：ntsysv
+  以全屏幕文本界面设置服务开机时是否自动启动。
+
+  示例二 重启MySQL
+  [root@node34 root]# service mysql 
+  mysql: unrecognized service
+  [root@node34 root]# service mysqld 
+  用法：/etc/init.d/mysqld {start|stop|status|condrestart|restart}
+  [root@node34 root]# service mysqld status 
+  mysqld (pid 1638) 正在运行...
+  [root@node34 root]# service mysqld restart 
+  停止 MySQL：                                               [  确定  ]
+  启动 MySQL：                                               [  确定  ]
+  [root@node34 root]#
+
+  http://blog.csdn.net/yy20071313/article/details/20583713
+
+
+
+
+
+
+
+
+
